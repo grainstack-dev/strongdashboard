@@ -1015,6 +1015,134 @@
         </div>
     </section>
 
+    <!-- Revenue Projections Widget -->
+    <section class="dashboard-section" id="revenue-projections">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Revenue Projections Widget</h2>
+            </div>
+            
+            <div style="text-align: center; margin-bottom: 48px;">
+                <p style="font-size: 1.1rem; font-style: italic; color: var(--gray-600); margin-bottom: 8px;">
+                    <strong>"The best way to predict the future is to create it."</strong>
+                </p>
+                <p style="font-size: 0.9rem; color: var(--gray-500);">- Peter Drucker</p>
+            </div>
+            
+            <!-- Revenue Projections Interactive Widget -->
+            <div style="background: white; border-radius: 24px; padding: 40px; box-shadow: 0 12px 40px rgba(0,0,0,0.1); border: 1px solid var(--gray-200); margin-bottom: 48px;">
+                <div style="display: grid; grid-template-columns: 1fr 300px; gap: 40px;">
+                    <!-- Main Chart Area -->
+                    <div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--gray-900); margin-bottom: 24px;">Revenue Growth Trajectory (2022-2028)</h3>
+                        <div style="height: 350px; position: relative; background: linear-gradient(135deg, rgba(0,102,204,0.02), rgba(0,166,81,0.02)); border-radius: 16px; padding: 20px;">
+                            <canvas id="projectionChart"></canvas>
+                        </div>
+                        
+                        <!-- Growth Rate Indicators -->
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px; margin-top: 24px;">
+                            <div style="background: rgba(0,102,204,0.05); padding: 16px; border-radius: 12px; text-align: center; border-left: 4px solid var(--primary-blue);">
+                                <div style="font-size: 1.2rem; font-weight: 800; color: var(--primary-blue);">134%</div>
+                                <div style="font-size: 0.8rem; color: var(--gray-600); font-weight: 600;">3-Year CAGR</div>
+                            </div>
+                            <div style="background: rgba(0,166,81,0.05); padding: 16px; border-radius: 12px; text-align: center; border-left: 4px solid var(--primary-green);">
+                                <div style="font-size: 1.2rem; font-weight: 800; color: var(--primary-green);">370%</div>
+                                <div style="font-size: 0.8rem; color: var(--gray-600); font-weight: 600;">2025 Growth</div>
+                            </div>
+                            <div style="background: rgba(247,183,49,0.05); padding: 16px; border-radius: 12px; text-align: center; border-left: 4px solid var(--accent-gold);">
+                                <div style="font-size: 1.2rem; font-weight: 800; color: var(--accent-gold);">$10.6M</div>
+                                <div style="font-size: 0.8rem; color: var(--gray-600); font-weight: 600;">2028 Target</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Revenue Breakdown Sidebar -->
+                    <div>
+                        <h4 style="font-size: 1.2rem; font-weight: 700; color: var(--gray-900); margin-bottom: 20px;">2025 Revenue Breakdown</h4>
+                        
+                        <!-- Revenue Stream Cards -->
+                        <div style="display: flex; flex-direction: column; gap: 16px;">
+                            <div style="background: var(--gray-50); border-radius: 12px; padding: 20px; border-left: 4px solid var(--primary-blue);">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                    <span style="font-weight: 600; color: var(--gray-700); font-size: 0.9rem;">Franchise Fees</span>
+                                    <span style="font-weight: 800; color: var(--primary-blue);">$1.37M</span>
+                                </div>
+                                <div style="background: var(--gray-200); height: 6px; border-radius: 3px; overflow: hidden;">
+                                    <div style="background: var(--primary-blue); height: 100%; width: 50%; border-radius: 3px;"></div>
+                                </div>
+                                <div style="font-size: 0.8rem; color: var(--gray-500); margin-top: 4px;">50% of total revenue</div>
+                            </div>
+                            
+                            <div style="background: var(--gray-50); border-radius: 12px; padding: 20px; border-left: 4px solid var(--primary-green);">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                    <span style="font-weight: 600; color: var(--gray-700); font-size: 0.9rem;">Royalties</span>
+                                    <span style="font-weight: 800; color: var(--primary-green);">$820K</span>
+                                </div>
+                                <div style="background: var(--gray-200); height: 6px; border-radius: 3px; overflow: hidden;">
+                                    <div style="background: var(--primary-green); height: 100%; width: 30%; border-radius: 3px;"></div>
+                                </div>
+                                <div style="font-size: 0.8rem; color: var(--gray-500); margin-top: 4px;">30% of total revenue</div>
+                            </div>
+                            
+                            <div style="background: var(--gray-50); border-radius: 12px; padding: 20px; border-left: 4px solid var(--accent-gold);">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                    <span style="font-weight: 600; color: var(--gray-700); font-size: 0.9rem;">Marketing Fund</span>
+                                    <span style="font-weight: 800; color: var(--accent-gold);">$550K</span>
+                                </div>
+                                <div style="background: var(--gray-200); height: 6px; border-radius: 3px; overflow: hidden;">
+                                    <div style="background: var(--accent-gold); height: 100%; width: 20%; border-radius: 3px;"></div>
+                                </div>
+                                <div style="font-size: 0.8rem; color: var(--gray-500); margin-top: 4px;">20% of total revenue</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Key Metrics -->
+                        <div style="margin-top: 24px; padding: 20px; background: var(--gradient-primary); border-radius: 16px; color: white; text-align: center;">
+                            <div style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 8px;">2025 Monthly Average</div>
+                            <div style="font-size: 1.8rem; font-weight: 800; margin-bottom: 4px;">$228K</div>
+                            <div style="font-size: 0.8rem; opacity: 0.8;">Monthly Recurring Revenue</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scenario Analysis Widget -->
+            <div style="background: white; border-radius: 20px; padding: 32px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); border: 1px solid var(--gray-200);">
+                <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--gray-900); margin-bottom: 24px; text-align: center;">Revenue Scenario Analysis</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+                    <!-- Conservative Scenario -->
+                    <div style="background: rgba(239,68,68,0.05); border-radius: 16px; padding: 24px; border: 2px solid rgba(239,68,68,0.1); text-align: center;">
+                        <div style="width: 60px; height: 60px; background: rgba(239,68,68,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: var(--danger-red); font-size: 24px;">📉</div>
+                        <h4 style="color: var(--danger-red); font-weight: 700; margin-bottom: 12px;">Conservative</h4>
+                        <div style="font-size: 1.6rem; font-weight: 800; color: var(--danger-red); margin-bottom: 8px;">$8.2M</div>
+                        <div style="font-size: 0.9rem; color: var(--gray-600); margin-bottom: 12px;">2028 Revenue</div>
+                        <div style="font-size: 0.8rem; color: var(--gray-500); line-height: 1.4;">Slower franchise growth, market challenges</div>
+                    </div>
+                    
+                    <!-- Base Case Scenario -->
+                    <div style="background: rgba(0,102,204,0.05); border-radius: 16px; padding: 24px; border: 2px solid rgba(0,102,204,0.2); text-align: center; position: relative;">
+                        <div style="position: absolute; top: -8px; left: 50%; transform: translateX(-50%); background: var(--primary-blue); color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.7rem; font-weight: 700;">CURRENT PLAN</div>
+                        <div style="width: 60px; height: 60px; background: rgba(0,102,204,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: var(--primary-blue); font-size: 24px;">📊</div>
+                        <h4 style="color: var(--primary-blue); font-weight: 700; margin-bottom: 12px;">Base Case</h4>
+                        <div style="font-size: 1.6rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 8px;">$10.6M</div>
+                        <div style="font-size: 0.9rem; color: var(--gray-600); margin-bottom: 12px;">2028 Revenue</div>
+                        <div style="font-size: 0.8rem; color: var(--gray-500); line-height: 1.4;">Current trajectory, planned expansion</div>
+                    </div>
+                    
+                    <!-- Optimistic Scenario -->
+                    <div style="background: rgba(16,185,129,0.05); border-radius: 16px; padding: 24px; border: 2px solid rgba(16,185,129,0.1); text-align: center;">
+                        <div style="width: 60px; height: 60px; background: rgba(16,185,129,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: var(--success-green); font-size: 24px;">📈</div>
+                        <h4 style="color: var(--success-green); font-weight: 700; margin-bottom: 12px;">Optimistic</h4>
+                        <div style="font-size: 1.6rem; font-weight: 800; color: var(--success-green); margin-bottom: 8px;">$14.2M</div>
+                        <div style="font-size: 0.9rem; color: var(--gray-600); margin-bottom: 12px;">2028 Revenue</div>
+                        <div style="font-size: 0.8rem; color: var(--gray-500); line-height: 1.4;">Accelerated growth, market expansion</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Revenue Growth Section -->
     <section class="dashboard-section" id="financial-performance">
         <div class="section-container">
@@ -1192,134 +1320,18 @@
                 
                 <div class="interactive-map">
                     <h3 class="map-title">US Franchise Locations</h3>
-                    <svg class="usa-franchise-map" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
-                        <!-- US State Outlines -->
-                        <!-- Texas -->
-                        <path class="state-path has-franchise" d="M350 320 L420 315 L430 330 L440 345 L450 360 L460 375 L470 390 L480 405 L490 420 L500 435 L510 450 L520 465 L530 480 L525 495 L515 510 L500 520 L485 525 L470 520 L455 510 L440 495 L425 480 L410 465 L395 450 L380 435 L365 420 L355 405 L350 390 L345 375 L340 360 L345 345 L350 330 Z" data-state="Texas"/>
-                        
-                        <!-- California -->
-                        <path class="state-path has-franchise" d="M50 150 L70 140 L85 160 L95 180 L105 220 L115 260 L125 300 L120 340 L110 380 L95 400 L75 410 L55 400 L45 380 L40 350 L35 320 L30 280 L35 240 L40 200 L45 170 Z" data-state="California"/>
-                        
-                        <!-- Arizona -->
-                        <path class="state-path has-franchise" d="M125 300 L180 295 L190 310 L200 325 L210 340 L220 355 L230 370 L240 385 L235 400 L225 415 L210 425 L195 430 L180 425 L165 415 L150 405 L135 395 L125 380 L120 365 L115 350 L110 335 L115 320 Z" data-state="Arizona"/>
-                        
-                        <!-- Florida -->
-                        <path class="state-path has-franchise" d="M620 510 L720 505 L730 520 L740 535 L750 550 L780 565 L820 580 L860 595 L855 610 L845 625 L830 630 L815 625 L800 615 L785 600 L770 585 L755 570 L740 555 L725 540 L710 525 L695 510 L680 500 L665 495 L650 500 L635 505 Z" data-state="Florida"/>
-                        
-                        <!-- Illinois -->
-                        <path class="state-path has-franchise" d="M530 220 L580 215 L590 230 L600 245 L610 260 L620 275 L630 290 L625 305 L615 320 L600 330 L585 335 L570 330 L555 320 L545 305 L540 290 L535 275 L530 260 L525 245 L520 230 Z" data-state="Illinois"/>
-                        
-                        <!-- Connecticut -->
-                        <path class="state-path has-franchise" d="M830 170 L860 165 L870 180 L875 195 L870 210 L860 225 L845 230 L830 225 L820 210 L815 195 L820 180 Z" data-state="Connecticut"/>
-                        
-                        <!-- North Carolina -->
-                        <path class="state-path has-franchise" d="M730 320 L780 315 L790 330 L800 345 L810 360 L820 375 L825 390 L820 405 L810 420 L795 425 L780 420 L765 410 L755 395 L750 380 L745 365 L740 350 L735 335 Z" data-state="North Carolina"/>
-                        
-                        <!-- Pennsylvania -->
-                        <path class="state-path has-franchise" d="M730 200 L780 195 L790 210 L800 225 L810 240 L820 255 L830 270 L835 285 L830 300 L820 315 L805 320 L790 315 L775 305 L765 290 L760 275 L755 260 L750 245 L745 230 L740 215 Z" data-state="Pennsylvania"/>
-                        
-                        <!-- OPEN FRANCHISE MARKERS (13) - Green -->
-                        <g class="franchise-marker" data-location='{"name": "Southeast Houston", "state": "TX", "status": "Open", "signDate": "2020-10-03"}'>
-                            <circle class="marker-pulse" cx="450" cy="405" r="12" fill="#10B981" opacity="0.4"/>
-                            <circle cx="450" cy="405" r="6" fill="#10B981" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "West North Dallas", "state": "TX", "status": "Open", "signDate": "2021-02-03"}'>
-                            <circle class="marker-pulse" cx="435" cy="350" r="12" fill="#10B981" opacity="0.4"/>
-                            <circle cx="435" cy="350" r="6" fill="#10B981" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "NW Houston", "state": "TX", "status": "Open", "signDate": "2021-07-21"}'>
-                            <circle class="marker-pulse" cx="440" cy="395" r="12" fill="#10B981" opacity="0.4"/>
-                            <circle cx="440" cy="395" r="6" fill="#10B981" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "NE Tarrant County", "state": "TX", "status": "Open", "signDate": "2021-08-16"}'>
-                            <circle class="marker-pulse" cx="425" cy="355" r="12" fill="#10B981" opacity="0.4"/>
-                            <circle cx="425" cy="355" r="6" fill="#10B981" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "West Houston", "state": "TX", "status": "Open", "signDate": "2022-11-15"}'>
-                            <circle class="marker-pulse" cx="455" cy="400" r="12" fill="#10B981" opacity="0.4"/>
-                            <circle cx="455" cy="400" r="6" fill="#10B981" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "North East Texas", "state": "TX", "status": "Open", "signDate": "2023-11-03"}'>
-                            <circle class="marker-pulse" cx="460" cy="340" r="12" fill="#10B981" opacity="0.4"/>
-                            <circle cx="460" cy="340" r="6" fill="#10B981" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "North Dallas", "state": "TX", "status": "Open", "signDate": "2025-03-03"}'>
-                            <circle class="marker-pulse" cx="445" cy="345" r="12" fill="#10B981" opacity="0.4"/>
-                            <circle cx="445" cy="345" r="6" fill="#10B981" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "Folsom", "state": "CA", "status": "Open", "signDate": "2024-06-21"}'>
-                            <circle class="marker-pulse" cx="90" cy="240" r="12" fill="#10B981" opacity="0.4"/>
-                            <circle cx="90" cy="240" r="6" fill="#10B981" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "West Valley", "state": "AZ", "status": "Open", "signDate": "2021-06-18"}'>
-                            <circle class="marker-pulse" cx="200" cy="320" r="12" fill="#10B981" opacity="0.4"/>
-                            <circle cx="200" cy="320" r="6" fill="#10B981" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "Emerald Coast", "state": "FL", "status": "Open", "signDate": "2024-08-16"}'>
-                            <circle class="marker-pulse" cx="720" cy="580" r="12" fill="#10B981" opacity="0.4"/>
-                            <circle cx="720" cy="580" r="6" fill="#10B981" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <!-- PENDING FRANCHISE MARKERS (Blue) -->
-                        <g class="franchise-marker" data-location='{"name": "Fort Worth", "state": "TX", "status": "Pending", "signDate": "2024-11-22"}'>
-                            <circle class="marker-pulse" cx="420" cy="360" r="12" fill="#0066CC" opacity="0.4"/>
-                            <circle cx="420" cy="360" r="6" fill="#0066CC" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "Greater Lewisville", "state": "TX", "status": "Pending", "signDate": "2025-02-06"}'>
-                            <circle class="marker-pulse" cx="430" cy="340" r="12" fill="#0066CC" opacity="0.4"/>
-                            <circle cx="430" cy="340" r="6" fill="#0066CC" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "Greater Waco", "state": "TX", "status": "Pending", "signDate": "2025-02-06"}'>
-                            <circle class="marker-pulse" cx="440" cy="375" r="12" fill="#0066CC" opacity="0.4"/>
-                            <circle cx="440" cy="375" r="6" fill="#0066CC" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "San Diego", "state": "CA", "status": "Pending", "signDate": "2025-01-21"}'>
-                            <circle class="marker-pulse" cx="85" cy="320" r="12" fill="#0066CC" opacity="0.4"/>
-                            <circle cx="85" cy="320" r="6" fill="#0066CC" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "South Riverside", "state": "CA", "status": "Pending", "signDate": "2025-03-17"}'>
-                            <circle class="marker-pulse" cx="100" cy="290" r="12" fill="#0066CC" opacity="0.4"/>
-                            <circle cx="100" cy="290" r="6" fill="#0066CC" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "Mesa East Valley", "state": "AZ", "status": "Pending", "signDate": "2024-12-13"}'>
-                            <circle class="marker-pulse" cx="215" cy="330" r="12" fill="#0066CC" opacity="0.4"/>
-                            <circle cx="215" cy="330" r="6" fill="#0066CC" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "Western Chicagoland", "state": "IL", "status": "Pending", "signDate": "2025-01-22"}'>
-                            <circle class="marker-pulse" cx="555" cy="245" r="12" fill="#0066CC" opacity="0.4"/>
-                            <circle cx="555" cy="245" r="6" fill="#0066CC" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "Central Connecticut", "state": "CT", "status": "Pending", "signDate": "2024-12-19"}'>
-                            <circle class="marker-pulse" cx="850" cy="180" r="12" fill="#0066CC" opacity="0.4"/>
-                            <circle cx="850" cy="180" r="6" fill="#0066CC" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "Greater Raleigh", "state": "NC", "status": "Pending", "signDate": "2025-03-07"}'>
-                            <circle class="marker-pulse" cx="775" cy="350" r="12" fill="#0066CC" opacity="0.4"/>
-                            <circle cx="775" cy="350" r="6" fill="#0066CC" stroke="white" stroke-width="3"/>
-                        </g>
-                        
-                        <g class="franchise-marker" data-location='{"name": "Lancaster County", "state": "PA", "status": "Pending", "signDate": "2025-04-25"}'>
-                            <circle class="marker-pulse" cx="760" cy="240" r="12" fill="#0066CC" opacity="0.4"/>
-                            <circle cx="760" cy="240" r="6" fill="#0066CC" stroke="white" stroke-width="3"/>
-                        </g>
-                    </svg>
+                    <div style="width: 100%; height: 500px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <iframe 
+                            src="https://www.google.com/maps/d/u/0/embed?mid=1HNEM7abhqTB0SeE-cs4YfDiAqx5DsQQ&ehbc=2E312F&z=4" 
+                            width="100%" 
+                            height="100%" 
+                            style="border: 0; border-radius: 12px;"
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            title="Special Strong Franchise Locations Map"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                     
                     <div class="map-legend">
                         <div class="legend-title">Franchise Status</div>
